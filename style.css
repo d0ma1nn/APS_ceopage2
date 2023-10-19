@@ -110,7 +110,6 @@ i {
     font-size: 2rem;
 }
 .section__1--text p {
-    padding-inline: 2rem;
     text-align: justify;
 }
 
@@ -127,6 +126,49 @@ i {
 .section__1--img--content {
     background: url("/img/tabl.png");
     background-size: cover;
-    height: 60vh;
+    height: 53vh;
     width: 35vw;
+    margin: 2rem 2rem 2rem 0rem;
+}
+.section__2 {
+    background: var(--primary-color);
+}
+.section__2--left {
+    background: url("/img/sket.png");
+    background-size: cover;
+    height: 48vh;
+    width: 80vw;
+    display: flex;
+    align-self: center;
+    flex: 1;
+}
+.section__2--content {
+    display: flex;
+    gap: 4rem;
+    flex: 1;
+    justify-content: space-between;
+}
+.section__2--right {
+    padding: 5rem 0rem;
+    flex: 1;
+}
+.section__2--right h2 {
+    padding-bottom: 3rem;
+}
+.section__3--row {
+    display: flex;
+    gap: 2rem;
+}
+
+.section__3--text {
+    padding-bottom: 4rem;
+    text-align: center;
+}
+.section__3--text h2 {
+    color: #636363;
+    font-size: 3rem;
+    padding: 2rem;
+}
+.section__3--text p {
+    text-align: justify;
 }
