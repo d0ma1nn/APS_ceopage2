@@ -9,9 +9,7 @@
 }
 button {
     text-decoration: none;
-    border: 2px solid black;
-    background-color: rgba(20, 20, 20, 0);
-    padding: 0.5rem 3rem;
+
 
 }
 header {
@@ -119,6 +117,9 @@ i {
 
 .section__1--btn {
     text-transform: uppercase;
+    border: 2px solid black;
+    background-color: rgba(20, 20, 20, 0);
+    padding: 0.5rem 3rem;
 }
 .section__1--button {
     margin: auto 0;
@@ -158,6 +159,7 @@ i {
 .section__3--row {
     display: flex;
     gap: 2rem;
+    padding-bottom: 5rem;
 }
 
 .section__3--text {
@@ -171,4 +173,62 @@ i {
 }
 .section__3--text p {
     text-align: justify;
+}
+.width100 {
+    width: 100%;
+    position: relative;
+}
+.section__3--btn {
+    margin-top: 1rem;
+    border: none;
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 0.5rem 0.5rem;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: right;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+.section__3--row1--icon {
+    width: 100%;
+    height: 10vh;
+    background-position: center;
+}
+
+.section__3--row1 p {
+    padding-top: 2rem;
+}
+
+.icon1 {
+    background-image: url("/img/1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon2 {
+    background-image: url("/img/2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon3 {
+    background-image: url("/img/3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon6 {
+    background-image: url("/img/4.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon4 {
+    background-image: url("/img/6.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon5 {
+    background-image: url("/img/5.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
