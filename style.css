@@ -4,6 +4,9 @@
 html {
     scroll-behavior: smooth;
 }
+a {
+    text-decoration: none;
+}
 input:focus,
 select:focus,
 textarea:focus,
