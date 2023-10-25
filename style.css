@@ -1,7 +1,9 @@
 :root {
     --primary-color: #fcb440;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 input:focus,
 select:focus,
 textarea:focus,
@@ -341,7 +343,7 @@ i {
     background: url("/img/logos.png");
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 6vh;
+    height: 6vh;
 }
 .footer__info {
     display: flex;
@@ -351,9 +353,22 @@ i {
 .footer__info--contact p, h3 {
     color: white;
 }
-
+.form__name { 
+    width: 30vw
+}
+.form__button {
+    background-color: #636363;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    position: relative;
+    border: 1px solid white;
+    left: 100%;
+    transform: translateX(-100%)
+}
 #message {
-    width: 87.5%;
+    width: 90%;
     height: 15vh;
     margin-top: 1rem;
 }
@@ -367,7 +382,7 @@ i {
     background: url("/img/logo.png");
     background-size: cover;
     height: 13vh;
-    width: 40%;
+    width: 50%;
     margin-block: 2rem;
     background-repeat: no-repeat;
 }
@@ -433,4 +448,26 @@ i {
 }
 .footer__copyright p {
     color: white;
+}
+button.topButton {
+    border-radius: 2rem;
+    background-color: rgba(177, 177, 177, 0.5);
+    border: 0px solid red;
+    position: fixed;
+    bottom: 10px;
+    color: #636363;
+    right: 15vw;
+    padding: 1rem;
+    width: 4vw;
+    height: 4vw;
+    cursor: pointer;
+}
+.topButton p {
+    text-align: center;
+    position: absolute;
+    top: -1.5rem;
+    left: 0.5rem;
+    transform: rotate(-90deg);
+    font-size: 5rem;
+    font-weight: 100;
 }
