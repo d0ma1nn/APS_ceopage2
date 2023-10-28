@@ -474,3 +474,6 @@ button.topButton {
     font-size: 5rem;
     font-weight: 100;
 }
+#tab {
+    transition: 1s ease;
+}
