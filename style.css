@@ -242,10 +242,13 @@ i {
     width: 100%;
     height: 10vh;
     background-position: center;
+    flex: 1;
 }
 
 .section__3--row1 p {
     padding-top: 2rem;
+    flex: 1;
+    max-width: 33vw;
 }
 
 .icon1 {
@@ -476,4 +479,7 @@ button.topButton {
 }
 #tab {
     transition: 1s ease;
+}
+.more, .more1, .more2 {
+    display: none;
 }
