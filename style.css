@@ -291,11 +291,14 @@ i {
 .section__4--flex {
     display: flex;
     gap: 3rem;
+    height: 100%;
+    height: 100vh;
 }
+
+
 .section__4--flex--1 {
     position: relative;
     width: 100%;
-    height: 85vh;
 }
 .section__4--flex h3{
     text-align: center;
@@ -315,24 +318,50 @@ i {
     background-position: center;
     margin-block: 2rem;
 }
+@keyframes text {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.text3, .text2 {
+    transform: translateX(0);
+    animation-name: text;
+    animation-duration: 2s;
+
+}
 .avatar1 {
     background: url("/img/av1.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    transform: translateX(0);
+    cursor: pointer;
 }
+
 .avatar2 {
     background: url("/img/av2.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
+    transform: translateX(0);
 }
+
 .avatar3 {
     background: url("/img/av3.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    transform: translateX(0);
+    cursor: pointer;
 }
+
 .section__4 p, .section__4 h2, .section__4 h3{
     color: white;
 }

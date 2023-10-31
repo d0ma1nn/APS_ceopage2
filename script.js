@@ -1,9 +1,95 @@
 "use strict"
 
+const av1 = document.querySelector('.avatar1');
+const av2 = document.querySelector('.avatar2');
+const av3 = document.querySelector('.avatar3');
+const text3 = document.querySelector('.text3')
+const text2 = document.querySelector('.text2')
+const text1 = document.querySelector('.text1')
+av2.style.transition = "ease-in 2s"
+av3.style.transition = "ease-out 2s"
+av1.style.transition = "ease-in 2s"
+text3.style.transition = "ease 1s"
+text2.style.transition = "ease 1s"
+text1.style.transition = "ease 1s"
+
+// const avat2 = document.querySelector('.avat2');
+av2.addEventListener('click', function() {
+    if(av2.style.transform === "translateX(0px)") {
+        av2.style.transform = 'translateX(-300px)';
+        text2.style.transform = "translateX(-300px)"
+        av1.style.transform = 'translateX(300px)';
+        text1.style.transform = "translateX(300px)"
+        text3.style.transform = "translateX(0px)"
+        av3.style.transform = "translate(0px)"
+    } else if (av2.style.transform ===  "translateX(-300px)") {
+        av2.style.transform = 'translateX(0px)';
+        av3.style.transform = "translateX(0px)";
+        av1.style.transform = "translate(0px)"
+    }
+    else {
+        av2.style.transform = 'translateX(-300px)';
+        av1.style.transform = "translateX("+300+"px)";
+
+    }
+})
+
+av3.addEventListener('click', function() {
+    if(av3.style.transform === "translateX(0px)") {
+        av1.style.transform = 'translateX(600px)';
+        text1.style.transform = "translateX(600px)"
+        av2.style.transform = 'translateX(0px)';
+        text2.style.transform = "translateX(0px)"
+        av3.style.transform = "translateX(-600px)"
+        text3.style.transform = "translateX(-600px)"
+
+    } else if (av3.style.transform ===  "translateX(-300px)") {
+        av3.style.transform = 'translateX(0px)';
+        av2.style.transform = "translateX(0px)";
+    }
+    else {
+        av3.style.transform = 'translateX(0px)';
+        text.style.transform = "translateX(0px)"
+        av1.style.transform = "translateX(0px)";
+        text1.style.transform = "translate(0px)"
+    }
+})
+
+av1.addEventListener('click', function() {
+    if(av1.style.transform === "translateX(0px)") {
+        let ran = Math.floor(Math.random() * 2 + 2);
+        if (ran === 2){
+            av3.style.transform = 'translateX(-300px)';
+            av2.style.transform = 'translateX(300px)';
+            text2.style.transform = "translateX(300px)"
+            text3.style.transform = "translate(-300px)"
+        } else {
+            av2.style.transform = 'translateX(0)';
+            av3.style.transform = 'translateX(0)';
+            text2.style.transform = "translateX(0px)"
+            text3.style.transform = "translate(0px)"
+        }
+        
+    } else if (av1.style.transform ===  "translateX(300px)") {
+        av1.style.transform = 'translateX(0px)';
+        av2.style.transform = "translateX(0px)";
+        text1.style.transform = "translateX(0px)"
+    }
+    else {
+        av1.style.transform = 'translateX(0px)';
+        av2.style.transform = "translateX(0px)";
+
+    }
+})
+
+// function av2() {
+
+// }
+
 function more() {
-    var dots = document.querySelector(".dots");
-    var moreText = document.querySelector(".more");
-    var btnText = document.getElementById("moreBtn");
+    const dots = document.querySelector(".dots");
+    const moreText = document.querySelector(".more");
+    const btnText = document.getElementById("moreBtn");
     
     if (dots.style.display === "none") {
       dots.style.display = "inline";
@@ -47,17 +133,20 @@ function third(){
     console.log(moreBtn2)
 }
 
-window.onscroll = function (e) {
-        console.log(window.scrollY); 
+window.onscroll = function () {
     };
     document.addEventListener("scroll", function() {
         const tab = document.getElementById("tablet");
         const tabBtn = document.getElementById("tabBtn")
         const icon1 = document.querySelector(".icon1");
+        const icon2 = document.querySelector(".icon2");
+        const icon3 = document.querySelector(".icon3");
         let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         tab.style.transition  = "all 1s";
         tabBtn.style.transition  = "all 1s";
         icon1.style.transition = "ease 1s"
+        icon3.style.transition = "ease 2s"
+        icon2.style.transition = "ease 1s"
         if (scrollTop < 700) {
             tab.style.transform = "translateX(-100px)"
             tab.style.opacity = "0"
@@ -71,7 +160,19 @@ window.onscroll = function (e) {
         }
         if (scrollTop < 1900) {
             icon1.style.opacity = "0"
+            setTimeout(() => {                
+                return icon2.style.opacity = "0"
+             }, 500);
+             setTimeout(() => {                
+                return icon3.style.opacity = "0"
+             }, 1000);
         } else {
+            setTimeout(() => {                
+                return icon3.style.opacity = "1"
+             }, 1000);
+             setTimeout(() => {                
+                return icon2.style.opacity = "1"
+             }, 500);
             icon1.style.opacity = "1"
         }
     })
