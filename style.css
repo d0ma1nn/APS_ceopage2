@@ -118,7 +118,7 @@ i {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 8rem;
+    height: 7rem;
 }
 .top__menu {
     margin: auto;
@@ -142,8 +142,8 @@ i {
 .wrapper__sketch {
     background: url("/img/draw.png");
     background-size: cover;
-    height: 36vh;
-    width: 24vw;
+    height: 30vh;
+    width: 20vw;
 }
 
 .section__1--text {
@@ -510,5 +510,65 @@ button.topButton {
     transition: 1s ease;
 }
 .more, .more1, .more2 {
+    display: none;
+}
+.modal {
+    background-color: rgba(177, 177, 177, 0.5);
+    width: 100vw;
+    height: 100vh;
+}
+.person {
+    margin: auto ;
+    top: 50%;
+    transform:translateY(-50%);
+    width: 40vw;
+    position: relative;
+    background: rgba(252, 160, 14, 0.8);
+    border-radius: 2rem;
+}
+.person__flex {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    padding: 2rem;
+    border-radius: 3rem;
+}
+.person__avatar, .person__info {
+width: 35vw;
+font-size: 1rem;
+position: relative;
+
+}
+.person__text p, h2{
+    color: white;
+}
+.person__text h2 {
+    padding-bottom: 1rem;
+}
+.button__ok {
+    position: relative;
+    right: 0rem;
+    height: 4vh;
+    width: 4vw;
+    border: 14px solid white;
+    border-top-right-radius: 0rem;
+    border-top-left-radius: 10px solid white;
+    border-bottom-left-radius: 0px 0px;
+    border-bottom: none;
+    border-left: none;
+    cursor: pointer;
+    color: white;
+    padding: 1rem;
+}
+.avatar1_1 {
+    background: url("/img/av1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: translateX(0);
+    cursor: pointer;
+}
+
+.modal {
     display: none;
 }

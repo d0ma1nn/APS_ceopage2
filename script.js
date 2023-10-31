@@ -6,6 +6,26 @@ const av3 = document.querySelector('.avatar3');
 const text3 = document.querySelector('.text3')
 const text2 = document.querySelector('.text2')
 const text1 = document.querySelector('.text1')
+const button__ok = document.querySelector('.button__ok')
+const modal = document.querySelector('.modal')
+const modal__1 = document.querySelector(".modal__1");
+
+modal.style.transition = "ease-in 0.5s"
+
+
+
+ button__ok.addEventListener('click', function(){
+    modal.style.display ="block";
+    document.body.style.display = "none";
+    console.log(3)
+ })
+
+modal__1.addEventListener('click', function(){
+    document.body.style.display = "none";
+    modal.style.display ="block";
+    console.log(3)
+ })
+
 av2.style.transition = "ease-in 2s"
 av3.style.transition = "ease-out 2s"
 av1.style.transition = "ease-in 2s"
@@ -30,7 +50,7 @@ av2.addEventListener('click', function() {
     else {
         av2.style.transform = 'translateX(-300px)';
         av1.style.transform = "translateX("+300+"px)";
-
+        text1.stay
     }
 })
 
@@ -49,7 +69,6 @@ av3.addEventListener('click', function() {
     }
     else {
         av3.style.transform = 'translateX(0px)';
-        text.style.transform = "translateX(0px)"
         av1.style.transform = "translateX(0px)";
         text1.style.transform = "translate(0px)"
     }
