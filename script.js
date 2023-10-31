@@ -10,20 +10,47 @@ const button__ok = document.querySelector('.button__ok')
 const modal = document.querySelector('.modal')
 const modal__1 = document.querySelector(".modal__1");
 
+const header = document.getElementById('header')
+const section__1 = document.querySelector('.section__1')
+const wrapper = document.querySelector('.wrapper')
+const section__2 = document.querySelector('.section__2')
+const section__3 = document.querySelector('.section__3')
+const section__4 = document.querySelector('.section__4')
+const section__5 = document.querySelector('.section__5')
+const footer = document.querySelector('.footer')
+const topButton = document.querySelector('.topButton');
+
 modal.style.transition = "ease-in 0.5s"
 
 
 
  button__ok.addEventListener('click', function(){
-    modal.style.display ="block";
-    document.body.style.display = "none";
+    modal.style.display ="none";
+    wrapper.style.display ="block";
+    header.style.display ="block";
+    section__1.style.display ="block";
+    section__2.style.display ="block";
+    section__3.style.display ="block";
+    section__4.style.display ="block";
+    section__5.style.display ="block";
+    footer.style.display ="block";
+    topButton.style.display="block"
+    
     console.log(3)
  })
 
 modal__1.addEventListener('click', function(){
-    document.body.style.display = "none";
     modal.style.display ="block";
-    console.log(3)
+    wrapper.style.display ="none";
+    header.style.display ="none";
+    section__1.style.display ="none";
+    section__2.style.display ="none";
+    section__3.style.display ="none";
+    section__4.style.display ="none";
+    section__5.style.display ="none";
+    footer.style.display ="none";
+    topButton.style.display="none"
+
  })
 
 av2.style.transition = "ease-in 2s"
