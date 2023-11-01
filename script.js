@@ -9,6 +9,10 @@ const text1 = document.querySelector('.text1')
 const button__ok = document.querySelector('.button__ok')
 const modal = document.querySelector('.modal')
 const modal__1 = document.querySelector(".modal__1");
+const modal__2 = document.querySelector(".modal__2");
+const modal__3 = document.querySelector(".modal__3");
+const modal__text = document.querySelector(".modal__text");
+const modal__name = document.querySelector(".modal__name");
 
 const header = document.getElementById('header')
 const section__1 = document.querySelector('.section__1')
@@ -19,6 +23,15 @@ const section__4 = document.querySelector('.section__4')
 const section__5 = document.querySelector('.section__5')
 const footer = document.querySelector('.footer')
 const topButton = document.querySelector('.topButton');
+const avatar1__1 = document.querySelector('.avatar1_1');
+const avatar1__2 = document.querySelector('.avatar1_2');
+const avatar1__3 = document.querySelector('.avatar1_3');
+
+const quotes = {
+    John : {name: 'Jonh Doe', quote: 'I am john lord, from deep purple pianist who know some songs around the world'},
+    Peter : {name: 'Peter hunt',img:"url('/img/av2.png')", quote: 'POpd oaeiorjeao itjioae jitoae iomfkaefmnaej fnj aenfjjoae jofaenjon jaentjinwsrnguio jsfiojgi pqj3ion '},
+    Angela : {name: 'Angela Mitchel', quote: 'aio jeio 7iw3tniryseiutyw4v8tnvywirytw78erynuitv789wtyx3woervouieynvi', img: "url('/img/av3.png')"},
+}
 
 modal.style.transition = "ease-in 0.5s"
 
@@ -35,11 +48,11 @@ modal.style.transition = "ease-in 0.5s"
     section__5.style.display ="block";
     footer.style.display ="block";
     topButton.style.display="block"
-    
     console.log(3)
  })
 
 modal__1.addEventListener('click', function(){
+    avatar1__3.style.backgroundImage = "url('/img/av1.png')"; 
     modal.style.display ="block";
     wrapper.style.display ="none";
     header.style.display ="none";
@@ -50,7 +63,41 @@ modal__1.addEventListener('click', function(){
     section__5.style.display ="none";
     footer.style.display ="none";
     topButton.style.display="none"
+    modal__text.innerHTML = `${quotes.John.quote}`
+    modal__name.innerHTML = `${quotes.John.name}`
+ })
 
+ modal__2.addEventListener('click', ()=> {
+    avatar1__1.style.backgroundImage = `${quotes.Peter.img}`; 
+    modal.style.display ="block";
+    wrapper.style.display ="none";
+    header.style.display ="none";
+    section__1.style.display ="none";
+    section__2.style.display ="none";
+    section__3.style.display ="none";
+    section__4.style.display ="none";
+    section__5.style.display ="none";
+    footer.style.display ="none";
+    topButton.style.display="none";
+    modal__text.innerHTML = `${quotes.Peter.quote}`
+    modal__name.innerHTML = `${quotes.Peter.name}`
+ })
+
+ modal__3.addEventListener('click', ()=> {
+    avatar1__2.style.backgroundImage = `${quotes.Angela.img}`; 
+    console.log(avatar1__2,quotes.Angela.img);
+    modal.style.display ="block";
+    wrapper.style.display ="none";
+    header.style.display ="none";
+    section__1.style.display ="none";
+    section__2.style.display ="none";
+    section__3.style.display ="none";
+    section__4.style.display ="none";
+    section__5.style.display ="none";
+    footer.style.display ="none";
+    topButton.style.display="none";
+    modal__text.innerHTML = `${quotes.Angela.quote}`;
+    modal__name.innerHTML = `${quotes.Angela.name}`;
  })
 
 av2.style.transition = "ease-in 2s"
